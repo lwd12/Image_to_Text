@@ -1,5 +1,4 @@
 Image_to_Text
-
 =============
 Converting an image into text for representation.  
 
