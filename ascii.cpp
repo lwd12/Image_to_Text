@@ -5,7 +5,7 @@
  @Return:	The character
  */
 
-/*
+
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
@@ -19,18 +19,18 @@ using namespace sf;
 
 
 
-	//±â´É ±¸Çö
+	//ê¸°ëŠ¥ êµ¬í˜„
 char colorToChar(Color C, int type = 2) {
 
-    //  ¹à±â = (2 * Red + 5 * Green + 1 * Blue) / 8
+    //  ë°ê¸° = (2 * Red + 5 * Green + 1 * Blue) / 8
     int tempInt = (2 * C.r + 4 * C.g + C.b) / 8;    //convert the pizel to black and white (get the intensity of the color)
 
-    //¿ŞÂÊÀÇ °¡Àå ¾îµÎ¿î °ÍºÎÅÍ ¿À¸¥ÂÊÀÇ °¡Àå ¹àÀº °Í±îÁö ¼±ÅÃÇÏ±â À§ÇÑ ¹®ÀÚ ¸ñ·Ï
+    //ì™¼ìª½ì˜ ê°€ì¥ ì–´ë‘ìš´ ê²ƒë¶€í„° ì˜¤ë¥¸ìª½ì˜ ê°€ì¥ ë°ì€ ê²ƒê¹Œì§€ ì„ íƒí•˜ê¸° ìœ„í•œ ë¬¸ì ëª©ë¡
     string CHARACTERS;
 
     switch (type) {
     case 1:
-        CHARACTERS = "$@&X?¨¡¡×0?8#1¢æ¢Ô/|(){}[]?li-_?©ª%*¡¾+¡À~<>!;:,^¡Æ`'.¡¤ ";   
+        CHARACTERS = "$@&X?Ã†Â§0?8#1ï¿½â€¡/|(){}[]?li-_?Ã¸%*Â±+Ã·~<>!;:,^Â°`'.Â· ";   
         break;
     case 2:
         CHARACTERS = "@#%*=+-:. ";                                      
@@ -55,7 +55,7 @@ int main() {
     cout << ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n";
 
     string imagePath;
-    cout << "º¯È¯ÇÏ·Á´Â ÀÌ¹ÌÁö ÆÄÀÏÀÇ ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä ->";
+    cout << "ë³€í™˜í•˜ë ¤ëŠ” ì´ë¯¸ì§€ íŒŒì¼ì˜ ì£¼ì†Œë¥¼ ì…ë ¥í•˜ì„¸ìš” ->";
     getline(cin, imagePath);
 
    Image img;
@@ -63,7 +63,7 @@ int main() {
         return EXIT_FAILURE;
     }
     else {
-        cout << "ÀÌ¹ÌÁö Ãâ·Â: " << imagePath << "\n";
+        cout << "ì´ë¯¸ì§€ ì¶œë ¥: " << imagePath << "\n";
     }
 
     string textFilePath = imagePath;
@@ -73,13 +73,13 @@ int main() {
     }
     textFilePath.append("txt");       
 
-    ofstream outputTextFile(textFilePath, ios::trunc);	//ÅØ½ºÆ® ÆÄÀÏ ÀúÀå ºÒ°¡
+    ofstream outputTextFile(textFilePath, ios::trunc);	//í…ìŠ¤íŠ¸ íŒŒì¼ ì €ì¥ ë¶ˆê°€
     if (!outputTextFile) {
-        cout << "ÅØ½ºÆ® ÆÄÀÏÀ» ¸¸µéÁö ¸øÇß½À´Ï´Ù. :(\n";
+        cout << "í…ìŠ¤íŠ¸ íŒŒì¼ì„ ë§Œë“¤ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. :(\n";
         return EXIT_FAILURE;
     }
     else {
-        cout << "ÅØ½ºÆ® ÆÄÀÏ ÀúÀå ÁÖ¼Ò: " << textFilePath << "\n";
+        cout << "í…ìŠ¤íŠ¸ íŒŒì¼ ì €ì¥ ì£¼ì†Œ: " << textFilePath << "\n";
     }
     cout << "\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n";
 
@@ -87,19 +87,19 @@ int main() {
     cout << "Pixels per letter: ";
     cin >> pixelsPerLetter;
     while (pixelsPerLetter > 100 || pixelsPerLetter < 1) {
-        cout << "\tError: 1ºÎÅÍ 100±îÁö¸¸ °¡´ÉÇÕ´Ï´Ù ´Ù½ÃÇÏ¼¼¿ä: ";
+        cout << "\tError: 1ë¶€í„° 100ê¹Œì§€ë§Œ ê°€ëŠ¥í•©ë‹ˆë‹¤ ë‹¤ì‹œí•˜ì„¸ìš”: ";
         cin >> pixelsPerLetter;
     }
 
     int type;
-    cout << "\n1. Complex:\t $@&X?¨¡¡×0?8#1¢æ¢Ô/|(){}[]?li-_?©ª%*¡¾+¡À~<>!;:,^¡Æ`'.¡¤ ";
+    cout << "\n1. Complex:\t $@&X?Ã†Â§0?8#1ï¿½â€¡/|(){}[]?li-_?Ã¸%*Â±+Ã·~<>!;:,^Â°`'.Â· ";
     cout << "\n2. Simple:\t @#%*=+-:. ";
     cout << "\n3. Currency:\t $?.  ";
     cout << "\n - Choose a scale: ";
     cin >> type;
 
     while (type > 3 || type < 1) {
-        cout << "\tError: 1ºÎÅÍ 3±îÁö¸¸ °¡´ÉÇÕ´Ï´Ù ´Ù½ÃÇÏ¼¼¿ä: ";
+        cout << "\tError: 1ë¶€í„° 3ê¹Œì§€ë§Œ ê°€ëŠ¥í•©ë‹ˆë‹¤ ë‹¤ì‹œí•˜ì„¸ìš”: ";
         cin >> pixelsPerLetter;
     }
 
@@ -113,10 +113,9 @@ int main() {
     }
 
     outputTextFile.close();
-    std::cout << "\n¼º°øÇß½À´Ï´Ù ÆÄÀÏÀÌ ÀúÀåµÇ¾ú½À´Ï´Ù: " << textFilePath << "\n\n";
+    std::cout << "\nì„±ê³µí–ˆìŠµë‹ˆë‹¤ íŒŒì¼ì´ ì €ì¥ë˜ì—ˆìŠµë‹ˆë‹¤: " << textFilePath << "\n\n";
 
     return EXIT_SUCCESS;
 }
 
 
-*/
