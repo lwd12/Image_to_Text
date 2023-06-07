@@ -23,7 +23,7 @@ using namespace sf;
 char colorToChar(Color C, int type = 2) {
 
     //  밝기 = (2 * Red + 5 * Green + 1 * Blue) / 8
-    int tempInt = (2 * C.r + 4 * C.g + C.b) / 8;    //convert the pizel to black and white (get the intensity of the color)
+    int tempInt = (2 * C.r + 4 * C.g + C.b) / 8;    
 
     //왼쪽의 가장 어두운 것부터 오른쪽의 가장 밝은 것까지 선택하기 위한 문자 목록
     string CHARACTERS;
