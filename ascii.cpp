@@ -1,10 +1,3 @@
-/**
- This function converts a color to a character. Based off:
- http://paulbourke.net/dataformats/asciiart/
- @Param 1:	The color
- @Return:	The character
- */
-
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
