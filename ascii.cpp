@@ -13,7 +13,7 @@ using namespace sf;
 
 
 	//기능 구현
-char colorToChar(Color C, int type = 2) {
+char colorToChar(Color C, int type) {
 
     //  밝기 = (2 * Red + 5 * Green + 1 * Blue) / 8
     int tempInt = (2 * C.r + 4 * C.g + C.b) / 8;    
