@@ -1,12 +1,16 @@
 Image_to_Text
 =============
-Converting an image into text for representation.  
-<img src="/change.png" width="50%" height="40%" title="px(픽셀) 크기 설정" alt="setting"></img></br>
-<img src="/change.png" width="50%" height="40%" title="px(픽셀) 크기 설정" alt="shadow"></img></br>
+Converting an image into text for representation.    
+
+
+
+<img src="/change.jpg" width="50%" height="40%" title="px(픽셀) 크기 설정" alt="setting"></img></br><img src="/change.png" width="50%" height="40%" title="px(픽셀) 크기 설정" alt="shadow"></img></br>
 ## Function   
 > Converting an image into text for representation.  
 > Allowing step-by-step scaling rate changes.
 > Reading the brightness of an image and arranging special characters based on the differences in brightness.
+
+
 
 ## Image conversion function.
 ```C++
